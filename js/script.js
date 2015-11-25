@@ -5,8 +5,8 @@ var nPolygon;
 
 //initialize map
 var map = new L.Map('map', { 
-  center: [40.70663644882689,-73.97815704345703],
-  zoom: 14
+  center: [42.70663644882689,-71.97815704345703],
+  zoom: 11
 });
 
 var selectLayer = L.geoJson().addTo(map); //add empty geojson layer for selections
@@ -68,7 +68,7 @@ map.on('draw:drawstart', function (e) {
 });
 
 //add cartodb named map
-var layerUrl = 'https://cwhong.cartodb.com/api/v2/viz/dacf834a-2fa8-11e5-886f-0e4fddd5de28/viz.json';
+var layerUrl = 'https://mapc-maps.cartodb.com/api/v2/viz/edbbf01c-938d-11e5-a5e4-0ef7f98ade21/viz.json';
 
 cartodb.createLayer(map, layerUrl)
   .addTo(map)
@@ -76,9 +76,9 @@ cartodb.createLayer(map, layerUrl)
     mainLayer = layer.getSubLayer(0);
     mainLayer.setInteraction(false);
 
-    ntaLayer = layer.getSubLayer(1); 
-    ntaLayer.hide();  //hide neighborhood polygons
-    ntaLayer.on('featureClick', processNeighborhood);
+    // ntaLayer = layer.getSubLayer(1); 
+    // ntaLayer.hide();  //hide neighborhood polygons
+    // ntaLayer.on('featureClick', processNeighborhood);
   });
 
 //populate fields list
@@ -131,7 +131,7 @@ $('#selectAll').click(function(){
 //radio buttons
 $('input[type=radio][name=area]').change(function() {
   //reset all the things
-  ntaLayer.hide();
+  // ntaLayer.hide();
   selectLayer.clearLayers();
   $('.leaflet-draw-toolbar').hide();
   if (drawnLayer) {
@@ -149,7 +149,7 @@ $('input[type=radio][name=area]').change(function() {
   }
   if(this.value == 'neighborhood') {
     areaType='neighborhood';
-    ntaLayer.show();
+    // ntaLayer.show();
     $('.download').attr('disabled','disabled');
   }
 })
@@ -199,7 +199,7 @@ $('.download').click(function(){
     data.cartodb = true;
   }
 
-  var queryTemplate = 'https://cwhong.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name,description&format={{type}}&filename=pluto&q=SELECT the_geom{{fields}} FROM pluto15v1 a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
+  var queryTemplate = 'https://mapc-maps.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name&format={{type}}&filename=parcels&q=SELECT the_geom{{fields}} FROM subset_parcels a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
 
 
   var buildquery = Handlebars.compile(queryTemplate);
