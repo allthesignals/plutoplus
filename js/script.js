@@ -44,6 +44,7 @@ $('.leaflet-draw-toolbar').hide();
 var customPolygon;
 map.on('draw:created', function (e) {
     //hide the arrow
+    mainLayer.setInteraction(true);
     $('.infoArrow').hide();
 
     var type = e.layerType,
@@ -61,6 +62,8 @@ map.on('draw:created', function (e) {
 });
 
 map.on('draw:drawstart', function (e) {
+
+  mainLayer.setInteraction(false);
   console.log('start');
   if (drawnLayer) {
     map.removeLayer(drawnLayer);
