@@ -44,7 +44,7 @@
     "description":"Sum of assessed value for accessory buildings or other improvements on all associated assessors records. Value in $"
   },
   {
-    "name":"total_value",
+    "name":"total_valu",
     "description":"Sum of total assessed value for all associated assessors records. Value in $"
   },
   {
@@ -188,7 +188,7 @@
     "description":"Parcel area that is non-rooftop impervious surface; may include parking areas, internal roadways, sidewalks, patios, or sandy/rocky ground.   Units: square meters"
   },
   {
-    "name":"Shape_Length",
+    "name":"Shape_Leng",
     "description":"Shape_Length"
   },
   {
