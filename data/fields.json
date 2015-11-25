@@ -1,330 +1,198 @@
 [
   {
-    "name":"address",
-    "description":"An address for the tax lot."
+    "name":"mapc_id",
+    "description":"MAPC Assigned Parcel ID"
   },
   {
-    "name":"allzoning1",
-    "description":"ZONING, ALL COMPONENTS 1 consists of the zoning classification occupying the greatest percentage of the tax lot's area and a commercial overlay and special purpose district and limited height district assigned to the tax lot"
+    "name":"muni_id",
+    "description":"Standard Numeric Municipal ID (assigned by MA DOR)"
   },
   {
-    "name":"allzoning2",
-    "description":"If the tax lot is divided by zoning boundary lines, AllZoning2 consists of the primary zoning classification occupying the second greatest percentage of the tax lot's area and a commercial overlay and special purpose or limited height district assigned to the tax lot."
+    "name":"muni",
+    "description":"Name of Municipality"
   },
   {
-    "name":"appbbl",
-    "description":"The originating Borough, Tax Block and Tax Lot from the apportionment prior to the merge, split or property's conversion to a condominium. The Apportionment BBL is only available for mergers, splits and conversions since 1984."
+    "name":"parloc_id",
+    "description":"LOC ID from Level 3 Parcel assessors tables. Unique parcel ID based on latitude-longitude of parcel centroid; assigned by MassGIS"
   },
   {
-    "name":"appdate",
-    "description":"The date of the Apportionment in the format MM/DD/YYYY."
+    "name":"poly_typ",
+    "description":"Indicates type of ownership:  FEE, TAX, ROW, WATER, PRIV_ROW, RAIL_ROW"
   },
   {
-    "name":"areasource",
-    "description":"A code indicating the source file that was used to determine the tax lot's total building floor area."
+    "name":"map_num",
+    "description":"Local assessors map sheet number that contains the parcel"
   },
   {
-    "name":"assessland",
-    "description":"The actual assessed land value for Fiscal Year 2014"
+    "name":"mappar_id",
+    "description":"Parcel ID appearing on the original assessors map"
   },
   {
-    "name":"assesstot",
-    "description":"The actual assessed total value for Fiscal Year 2014."
+    "name":"loc_id_cnt",
+    "description":"Count of Assessors records for each parcel (more than one if condominium) "
   },
   {
-    "name":"bbl",
-    "description":"A concatenation of the BoroCode, TaxBlock and the corresponding TaxLot. This name consists of the tax block followed by the tax lot. The tax block is one to five numeric digits, preceded with leading zeros when the block is less than five digits. The tax lot is one to four digits and is preceded with leading zeros when the lot is less than four digits."
+    "name":"land_value",
+    "description":"Sum of assessed land value for all associated assessors records. Generally zero for condominiums where land value is allocated among individual condo deeds. Value in $"
   },
   {
-    "name":"bldgarea",
-    "description":"The total gross area in square feet."
+    "name":"bldg_value",
+    "description":"Sum of assessed building value for all associated assessors records.  For condominiums, generally includes land value. Value in $"
   },
   {
-    "name":"bldgclass",
-    "description":"A code describing the major use of structures on the tax lot."
+    "name":"othr_value",
+    "description":"Sum of assessed value for accessory buildings or other improvements on all associated assessors records. Value in $"
   },
   {
-    "name":"bldgdepth",
-    "description":"The building's depth, which is the effective perpendicular distance, measured in feet."
+    "name":"total_value",
+    "description":"Sum of total assessed value for all associated assessors records. Value in $"
   },
   {
-    "name":"bldgfront",
-    "description":"The building's frontage along the street measured in feet."
+    "name":"ls_price",
+    "description":"Last sale price, aggregated (sum of) assessorÕs records for each parcel. Value in $Ê Ê"
   },
   {
-    "name":"block",
-    "description":"The tax block in which the tax lot is located. Each tax block is unique within a borough (see BOROUGH)."
+    "name":"ls_date",
+    "description":"Date of most recent last sale from all associated assessors records, maximum value among assessorÕs records for each parcel. Value in YYYYMMDD"
   },
   {
-    "name":"borocode",
-    "description":"The borough the tax lot is located in."
+    "name":"bldg_area",
+    "description":"Aggregated (sum) of assessorÕs records of BLD_AREA (finished building area) for each parcel. AssessorsÕ methods vary widely but gross building area may include garages, stairwells, basements, and other uninhabitable areas. (MassGIS field BLD_AREA). Units: square feet"
   },
   {
-    "name":"bsmtcode",
-    "description":"A code describing the basement type/grade"
+    "name":"res_area",
+    "description":"Total residential living area aggregated (sum of) assessorÕs records for each parcel. Assessors methods vary widely but net building area may exclude garages, stairwells, basements, and other uninhabitable areas (MassGIS field RES_AREA). Units: square feet."
   },
   {
-    "name":"builtcode",
-    "description":"A code indicating whether the year the building was built (YearBuilt) was an estimate."
+    "name":"luc_1",
+    "description":"The minimum property type classification code found on all of the associated assessors records; may include non-standard codes assigned by local staff"
   },
   {
-    "name":"builtfar",
-    "description":"The Built Floor Area Ratio (FAR) is the total building floor area divided by the area of the tax lot."
+    "name":"luc_2",
+    "description":"The maximum property type classification code found on all of the associated assessors records; may include non-standard codes assigned by local staff"
   },
   {
-    "name":"cb2010",
-    "description":"The 2010 census block in which the tax lot is located. Each census block is unique within a census tract (see CT2010)."
+    "name":"luc_adj_1",
+    "description":"The minimum property type classification code, after non-standard codes were assigned by MAPC to the best match of standard codes"
   },
   {
-    "name":"cd",
-    "description":"The community district (CD) or joint interest area (JIA) the tax lot is located in, or partially located."
+    "name":"luc_adj_2",
+    "description":"The maximum property type classification code, after non-standard codes were assigned by MAPC to the best match of standard codes"
   },
   {
-    "name":"comarea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for commercial use."
+    "name":"num_units",
+    "description":"Number of units reported on assessors records, aggregated (sum of) assessorÕs records for each parcel."
   },
   {
-    "name":"commfar",
-    "description":"The Maximum Allowable Commercial Floor Area Ratio (FAR) . This name contains from one to four numeric digits with an imbedded decimal after the second digit."
+    "name":"units_est",
+    "description":"MAPC's best estimate of number of units, based on comparing the reported units, count of assessors records, and reported classification code"
   },
   {
-    "name":"condono",
-    "description":"The condominium number assigned to the complex."
+    "name":"units_src",
+    "description":"Source of estimated units.  units_nu = reported units; luc_adju = MAPC estimate based on use code; loc_idcn = count of associated assessors records for the parcel"
   },
   {
-    "name":"council",
-    "description":"The city council district in which the tax lot is located."
+    "name":"num_rooms",
+    "description":"Total room count as determined by assessor, Êaggregated (sum of) assessorÕs records for each parcel; may be absent for some property types or non-comparable across municipalities"
   },
   {
-    "name":"ct2010",
-    "description":"The 2010 US census tract in which the tax lot is located. Each census tract is unique within a borough."
+    "name":"yr_built",
+    "description":"Most recent year built on associated assessors records, format YYYY"
   },
   {
-    "name":"easements",
-    "description":"The number of easements on the tax lot. If the number is zero, the tax lot has no easement."
+    "name":"site_addr",
+    "description":"Address"
   },
   {
-    "name":"edesignum",
-    "description":"The E-Designation number assigned to the tax lot."
+    "name":"addr_str",
+    "description":"Street"
   },
   {
-    "name":"exemptland",
-    "description":"The actual exempt land value, which is determined differently for each exemption program, is the dollar amount related to that portion of the tax lot that has received an exemption or abatement for Fiscal Year 2014."
+    "name":"addr_num",
+    "description":"Street Number"
   },
   {
-    "name":"exempttot",
-    "description":"The actual exempt total value, which is determined differently for each exemption program, is the dollar amount related to that portion of the tax lot that has received an exemption or abatement for Fiscal Year 2014."
+    "name":"addr_zip",
+    "description":"Zip Code"
   },
   {
-    "name":"ext",
-    "description":"A code identifying whether there is an extension or free standing structure on the lot which is not the primary structure"
+    "name":"owner_name",
+    "description":"Owner Name"
   },
   {
-    "name":"facilfar",
-    "description":"The Maximum Allowable Facility Floor Area Ratio (FAR). This name contains from one to four numeric digits with an imbedded decimal after the second digit."
+    "name":"owner_addr",
+    "description":"Owner Address"
   },
   {
-    "name":"factryarea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for factory, warehouse or loft use."
+    "name":"owner_city",
+    "description":"Owner City"
   },
   {
-    "name":"firecomp",
-    "description":"The fire company that services the tax lot. This name consists of four characters, the first of which is an alphabetic code identifying the type of fire company, where E stands for Engine and L stands for Ladder. The type code is followed by a one to three digit fire company number which is preceded with leading zeros if the company number is less than three digits."
+    "name":"owner_stat",
+    "description":"Owner State"
   },
   {
-    "name":"garagearea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for garage use."
+    "name":"owner_zip",
+    "description":"Owner Zip Code"
   },
   {
-    "name":"healtharea",
-    "description":"The health area that the tax lot is located in."
+    "name":"fy",
+    "description":"Fiscal Year of the assessors data from which the information was extracted. Range: 2009-2014 (format: YYYY)"
   },
   {
-    "name":"histdist",
-    "description":"The name of the Historic District as designated by the New York City Landmarks Preservation Commission."
+    "name":"lot_areaft",
+    "description":"Calculated by MAPC based on digital parcel boundary. May include water area. Units: square feet. "
   },
   {
-    "name":"irrlotcode",
-    "description":"A code indicating whether the tax lot is irregularly shaped."
+    "name":"far",
+    "description":"A measure of density calculated by MAPC using either Gross or Finished building area (whichever is greater) divided by the Lot Area"
   },
   {
-    "name":"landmark",
-    "description":"The name of an individual landmark, landmark site (e.g. Richmondtown Restoration), or an interior landmark, as designated by the New York City Landmarks Preservation Commission."
+    "name":"pct_imperv",
+    "description":"MAPC estimate of impervious cover (buildings and pavement) on the parcel based on a combination of MassGIS's impervious surface layer (2005) and building rooftop layer (2012)"
   },
   {
-    "name":"landuse",
-    "description":"A code for the tax lot's land use category, modified for display of parks, New York City Department of Parks and Recreation properties and New York State Office of Parks, Recreation and Historic Preservation properties in the appropriate category on land use maps."
+    "name":"pct_bldg",
+    "description":"Percent of parcel estimated to be covered by a building"
   },
   {
-    "name":"lot",
-    "description":"The number of the tax lot. Each tax lot is unique within a tax block (see BLOCK)."
+    "name":"pct_pave",
+    "description":"Percent of parcel that is non-rooftop impervious surface; may include parking areas, internal roadways, sidewalks, patios, or sandy/rocky ground.  "
   },
   {
-    "name":"lotarea",
-    "description":"Total area of the tax lot, expressed in square feet rounded to the nearest"
+    "name":"landv_pac",
+    "description":"Assessed land value divided by lot area in acres. Units: $/acre"
   },
   {
-    "name":"lotdepth",
-    "description":"The tax lot's depth measured in feet."
+    "name":"Bldgv_psf",
+    "description":"Assessed building value divided by the building/finished area in sq ft (recorded by assessors). Units: $/square foot."
   },
   {
-    "name":"lotfront",
-    "description":"The tax lot's frontage measured in feet."
+    "name":"totv_pac",
+    "description":"Total assessed value divided by lot area in acres"
   },
   {
-    "name":"lottype",
-    "description":"A code indicating the location of the tax lot to another tax lot and/or the water"
+    "name":"bldlnd_rat",
+    "description":"Improvement value (building + other values) divided by total land value, where available"
   },
   {
-    "name":"ltdheight",
-    "description":"The limited height district assigned to the tax lot."
+    "name":"sqm_imperv",
+    "description":"MAPC estimate of impervious cover (buildings and pavement) on the parcel based on a combination of MassGIS's impervious surface layer (2005) and building rooftop layer (2012) Units: square meters"
   },
   {
-    "name":"numbldgs",
-    "description":"The number of buildings on the tax lot."
+    "name":"sqm_bldg",
+    "description":"Parcel area estimated to be covered by a building.  Units: square meters"
   },
   {
-    "name":"numfloors",
-    "description":"In the primary building on the tax lot, the number of full and partial stories starting from the ground floor."
+    "name":"sqm_pave",
+    "description":"Parcel area that is non-rooftop impervious surface; may include parking areas, internal roadways, sidewalks, patios, or sandy/rocky ground.   Units: square meters"
   },
   {
-    "name":"officearea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for office use."
+    "name":"Shape_Length",
+    "description":"Shape_Length"
   },
   {
-    "name":"otherarea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for other than Residential, Office, Retail, Garage, Storage, Loft or Factory use."
-  },
-  {
-    "name":"overlay1",
-    "description":"The commercial overlay assigned to the tax lot."
-  },
-  {
-    "name":"overlay2",
-    "description":"A commercial overlay associated with the tax lot"
-  },
-  {
-    "name":"ownername",
-    "description":"The name of the owner of the tax lot."
-  },
-  {
-    "name":"ownertype",
-    "description":"A code indicating type of ownership for the tax lot."
-  },
-  {
-    "name":"plutomapid",
-    "description":"A code indicating whether the tax lot is in the PLUTO file and/or the modified DTM and/or the modified DTM Clipped to the Shoreline File."
-  },
-  {
-    "name":"policeprct",
-    "description":"The police precinct in which the tax lot is located."
-  },
-  {
-    "name":"proxcode",
-    "description":"The physical relationship of the building to neighboring buildings."
-  },
-  {
-    "name":"resarea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for residential use."
-  },
-  {
-    "name":"residfar",
-    "description":"The Maximum Allowable Residential Floor Area Ratio (FAR). This name contains from one to four numeric digits with an imbedded decimal after the second digit."
-  },
-  {
-    "name":"retailarea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for retail use."
-  },
-  {
-    "name":"sanborn",
-    "description":"The Sanborn Map Company map number associated with the tax block and lot. Sanborn map number format is Borough Code / Volume Number / Page Number."
-  },
-  {
-    "name":"schooldist",
-    "description":"The community school district in which the tax lot is located."
-  },
-  {
-    "name":"spdist1",
-    "description":"The special purpose district assigned to the tax lot."
-  },
-  {
-    "name":"spdist2",
-    "description":"The special purpose district assigned to the tax lot."
-  },
-  {
-    "name":"splitzone",
-    "description":"A code indicating whether the tax lot is split by one or more zoning boundary lines."
-  },
-  {
-    "name":"strgearea",
-    "description":"An estimate of the exterior dimensions of the portion of the structure(s) allocated for storage or loft purposes."
-  },
-  {
-    "name":"taxmap",
-    "description":"The Department of Finance paper tax map Volume Number associated with the tax block and lot. Tax map number format is Borough Code / Volume Number / Page Number. The Department of Finance no longer updates their paper tax maps."
-  },
-  {
-    "name":"tract2010",
-    "description":"The 2010 census tract that the tax lot is located in."
-  },
-  {
-    "name":"unitsres",
-    "description":"The sum of residential units in all buildings on the tax lot."
-  },
-  {
-    "name":"unitstotal",
-    "description":"The sum of residential and non-residential (offices, retail stores, etc.) units in all buildings on the tax lot."
-  },
-  {
-    "name":"version",
-    "description":"The version of MapPLUTO."
-  },
-  {
-    "name":"xcoord",
-    "description":"The X coordinate of the XY coordinate pair which depicts the approximate location of the address."
-  },
-  {
-    "name":"ycoord",
-    "description":"The Y coordinate of the XY coordinate pair which depicts the approximate location of the address."
-  },
-  {
-    "name":"yearalter1",
-    "description":"The year of the most recent alteration."
-  },
-  {
-    "name":"yearalter2",
-    "description":"The year of the second most recent alteration."
-  },
-  {
-    "name":"yearbuilt",
-    "description":"The year construction of the building was completed."
-  },
-  {
-    "name":"zipcode",
-    "description":"The zip code that the tax lot is located in."
-  },
-  {
-    "name":"zmcode",
-    "description":"A code(Y) identifies a border Tax Lot, i.e., a Tax Lot on the border of two or more Zoning Maps."
-  },
-  {
-    "name":"zonedist1",
-    "description":"The zoning district classification of the tax lot. If the tax lot is divided by a zoning boundary line, ZoneDist1 represents the primary zoning district classification occupying the greatest percentage of the tax lot's area. Properties under the jurisdiction of NYC Department of Parks and Recreation are coded PARK. Properties under the jurisdiction of NYS Office of Parks, Recreation, and Historic Preservation are coded PARKNY. DROP LOT is a designation that City Planning devised to identify tax lots that no longer exist in the DCP version of the Digital Tax Map but have not yet been removed from the Department of Finance RPAD File. RPAD retains tax lots that have been dropped, due to merger, reapportionment or conversion to condominium, until the end of the City's Fiscal Year. To avoid confusion DROP LOT was created to identify these lots."
-  },
-  {
-    "name":"zonedist2",
-    "description":"If the tax lot is divided by zoning boundary lines, ZoneDist2 represents the primary zoning classification occupying the second greatest percentage of the tax lot's area. If the tax lot is not divided by a zoning boundary line, the name is blank."
-  },
-  {
-    "name":"zonedist3",
-    "description":"If the tax lot is divided by zoning boundary lines, ZoneDist3 represents the primary zoning classification occupying the third greatest percentage of the tax lot's area. If the tax lot is not divided by a zoning boundary line, the name is blank."
-  },
-  {
-    "name":"zonedist4",
-    "description":"If the tax lot is divided by zoning boundary lines, ZoneDist4 represents the primary zoning classification occupying the fourth greatest percentage of the tax lot's area. If the tax lot is not divided by a zoning boundary line, the name is blank."
-  },
-  {
-    "name":"zonemap",
-    "description":"The Department of City Planning Zoning Map Number associated with the tax lot's X and Y coordinates."
+    "name":"Shape_Area",
+    "description":"Shape_Area"
   }
 ]
