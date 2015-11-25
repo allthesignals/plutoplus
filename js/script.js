@@ -74,7 +74,6 @@ cartodb.createLayer(map, layerUrl)
   .addTo(map)
   .on('done', function(layer) {
     mainLayer = layer.getSubLayer(0);
-    mainLayer.setInteraction(false);
 
     // ntaLayer = layer.getSubLayer(1); 
     // ntaLayer.hide();  //hide neighborhood polygons
