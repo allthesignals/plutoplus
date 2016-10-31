@@ -71,7 +71,7 @@ map.on('draw:drawstart', function (e) {
 });
 
 //add cartodb named map
-var layerUrl = 'https://mapc-maps.cartodb.com/api/v2/viz/edbbf01c-938d-11e5-a5e4-0ef7f98ade21/viz.json';
+var layerUrl = 'https://mapc-maps.cartodb.com/api/v2/viz/212c7504-6efb-11e6-9a44-0e233c30368f/viz.json';
 
 cartodb.createLayer(map, layerUrl)
   .addTo(map)
@@ -201,7 +201,7 @@ $('.download').click(function(){
     data.cartodb = true;
   }
 
-  var queryTemplate = 'https://mapc-maps.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name&format={{type}}&filename=parcels&q=SELECT the_geom{{fields}} FROM subset_parcels a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
+  var queryTemplate = 'https://mapc-admin.cartodb.com/api/v2/sql?skipfields=cartodb_id,created_at,updated_at,name&format={{type}}&filename=parcels&q=SELECT the_geom{{fields}} FROM ma_parcels_metrofuture a WHERE ST_INTERSECTS({{{intersects}}}, a.the_geom)';
 
 
   var buildquery = Handlebars.compile(queryTemplate);
