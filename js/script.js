@@ -71,7 +71,7 @@ map.on('draw:drawstart', function (e) {
 });
 
 //add cartodb named map
-var layerUrl = 'https://mapc-maps.cartodb.com/api/v2/viz/212c7504-6efb-11e6-9a44-0e233c30368f/viz.json';
+var layerUrl = 'https://mapc-admin.cartodb.com/u/mapc-admin/v2/viz/212c7504-6efb-11e6-9a44-0e233c30368f/viz.json';
 
 cartodb.createLayer(map, layerUrl)
   .addTo(map)
